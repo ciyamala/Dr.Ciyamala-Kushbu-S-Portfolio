@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Ciyamala Kushbu S | Associate Professor, ISE, CMR Institute of Technology</title>
+<meta name="description" content="Dr. Ciyamala Kushbu S, Associate Professor, Information Science and Engineering, CMR Institute of Technology, Bangalore. Publications, teaching materials, achievements and contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F1F4F6; --surface:#FFFFFF; --ink:#0F2530; --muted:#4C6270; --line:#D5DEE4;
+  --accent:#0D6577; --accent-soft:#E1F0F3; --gold:#9A6A12; --gold-soft:#F6ECD6;
+  --shadow:0 1px 2px rgba(15,37,48,.06);
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+:root[data-theme="dark"]{
+  --bg:#0C1A22; --surface:#12252F; --ink:#E6EEF2; --muted:#9DB2BE; --line:#24404E;
+  --accent:#5CC2D6; --accent-soft:#143441; --gold:#E0B25A; --gold-soft:#2E2613;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.brand{font:700 18px var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}
+.nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{padding:8px 12px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:14.5px;font-weight:500;white-space:nowrap}
+.nav a:hover{background:var(--accent-soft);color:var(--ink)}
+.nav a.on{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:38px;height:38px;border-radius:10px;cursor:pointer;display:grid;place-items:center;flex:none}
+.icon-btn:hover{border-color:var(--accent)}
+
+/* hero */
+.hero{padding:56px 0 34px}
+.hero-grid{display:grid;grid-template-columns:1fr 230px;gap:40px;align-items:center}
+.hero h1{font:700 clamp(34px,6vw,58px)/1.05 var(--serif);margin:0 0 10px;letter-spacing:-.01em}
+.creds{font:italic 400 19px var(--serif);color:var(--muted);margin:0 0 18px}
+.role{margin:0 0 22px;font-size:17px}
+.role b{font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;font-weight:500;font-size:15px;cursor:pointer;font-family:inherit}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#06232B}
+.photo{width:230px;height:230px;border-radius:50%;border:1px solid var(--line);background:var(--accent-soft);overflow:hidden;display:grid;place-items:center;justify-self:end}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo span{font:700 72px var(--serif);color:var(--accent)}
+
+/* pipeline strip (hero signature) */
+.pipe{margin:34px 0 0;display:flex;gap:0;align-items:stretch;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.pipe div{flex:1;padding:12px 10px;text-align:center;font-size:14px;font-weight:500;color:var(--muted);border-right:1px solid var(--line);position:relative}
+.pipe div:last-child{border-right:0}
+.pipe div::after{content:"";position:absolute;inset:0;background:var(--accent);opacity:0;animation:stage 4.2s ease-out 0.3s 1 both}
+.pipe div:nth-child(1)::after{animation-delay:.3s}
+.pipe div:nth-child(2)::after{animation-delay:.75s}
+.pipe div:nth-child(3)::after{animation-delay:1.2s}
+.pipe div:nth-child(4)::after{animation-delay:1.65s}
+.pipe div:nth-child(5)::after{animation-delay:2.1s}
+.pipe span{position:relative;z-index:1}
+@keyframes stage{0%{opacity:0}8%{opacity:.16}30%{opacity:.16}60%,100%{opacity:0}}
+.pipe-cap{font-size:14px;color:var(--muted);margin:8px 2px 0}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0 0}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat b{display:block;font:700 28px var(--serif);color:var(--accent);line-height:1.1}
+.stat small{color:var(--muted);font-size:13.5px}
+
+/* toolbar */
+.tools{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:34px 0 14px;flex-wrap:wrap}
+.tools h2{font:700 24px var(--serif);margin:0}
+.tools .btn{padding:8px 14px;font-size:14px}
+
+/* accordion */
+.acc{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin:0 0 12px;box-shadow:var(--shadow)}
+.acc-h{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:12px;padding:16px 18px;cursor:pointer;border-radius:14px}
+.acc-h:hover{background:var(--accent-soft)}
+.acc-h:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.acc-h .t{font:700 20px/1.25 var(--serif);flex:1}
+.acc-h .meta{font-size:13.5px;color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:2px 10px;border-radius:99px;white-space:nowrap}
+.acc-h svg{flex:none;transition:transform .3s;color:var(--accent)}
+.acc.open>.acc-h svg{transform:rotate(180deg)}
+.acc-p{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.acc.open>.acc-p{grid-template-rows:1fr}
+.acc-in{overflow:hidden;min-height:0;visibility:hidden;transition:visibility 0s .35s}
+.acc.open>.acc-p>.acc-in{visibility:visible;transition-delay:0s}
+.acc-body{padding:4px 18px 18px}
+.sub{border:1px solid var(--line);border-radius:12px;margin:10px 0 0;background:var(--bg);box-shadow:none}
+.sub>.acc-h{padding:12px 14px}
+.sub>.acc-h .t{font:600 16.5px/1.3 var(--sans)}
+.sub .acc-body{padding:2px 14px 14px}
+.sub .meta{background:var(--surface)}
+
+p{margin:0 0 12px}
+.lead{font-size:17px}
+ul.clean,ol.clean{margin:6px 0 0;padding-left:22px}
+ul.clean li,ol.clean li{margin:0 0 8px}
+ol.clean li::marker{color:var(--muted);font-size:.9em}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:6px 14px;margin:0}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 0}
+.chip{border:1px solid var(--line);background:var(--surface);padding:5px 12px;border-radius:99px;font-size:14.5px}
+.tag{display:inline-block;font-size:12.5px;font-weight:600;padding:1px 8px;border-radius:99px;background:var(--gold-soft);color:var(--gold);margin-left:6px;vertical-align:1px}
+.yr{display:inline-block;min-width:44px;font-weight:600;color:var(--accent)}
+.links{list-style:none;padding:0;margin:6px 0 0}
+.links li{margin:0 0 8px;padding-left:0}
+.links .lab{color:var(--muted);font-size:14px;display:block}
+
+/* publications */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:2px 0 12px}
+.fbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 14px;border-radius:99px;cursor:pointer;font:500 14px var(--sans)}
+.fbtn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .fbtn[aria-pressed="true"]{color:#06232B}
+.search{flex:1;min-width:180px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 12px;border-radius:10px;font:400 15px var(--sans)}
+.count{font-size:14px;color:var(--muted);margin:0 0 8px}
+.pub{padding:12px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:48px 1fr;gap:6px}
+.pub:first-of-type{border-top:0}
+.pub .y{font-weight:600;color:var(--accent)}
+.pub .ty{font-size:13px;color:var(--muted)}
+.empty{padding:14px;border:1px dashed var(--line);border-radius:10px;color:var(--muted)}
+.more{margin-top:10px}
+
+footer{padding:34px 0 50px;color:var(--muted);font-size:14.5px;border-top:1px solid var(--line);margin-top:30px}
+
+@media (max-width:820px){
+  .hero-grid{grid-template-columns:1fr}
+  .photo{justify-self:start;width:150px;height:150px;order:-1}
+  .photo span{font-size:52px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .kv{grid-template-columns:1fr}
+  .kv dt{margin-top:6px}
+  .brand{font-size:16px}
+}
+@media (max-width:560px){.pipe{flex-direction:column}.pipe div{border-right:0;border-bottom:1px solid var(--line)}.pipe div:last-child{border-bottom:0}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .acc-p,.acc-h svg{transition:none}
+  .pipe div::after{animation:none}
+}
+@media print{.bar,.tools .btn,.filters,.icon-btn{display:none}.acc-p{grid-template-rows:1fr!important}.acc-in{visibility:visible!important}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Dr. Ciyamala Kushbu S</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#profile">Profile</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#service">Service</a>
+      <a href="#skills">Skills</a>
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="icon-btn" id="theme" aria-label="Switch between light and dark theme" title="Switch theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <h1>Dr. Ciyamala Kushbu S</h1>
+        <p class="creds">M.E, Ph.D, MISTE, MIFERP</p>
+        <p class="role"><b>Associate Professor</b>, Information Science and Engineering<br>CMR Institute of Technology, Bangalore</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:ciyamala.s@cmrit.ac.in">Email me</a>
+          <a class="btn" href="#publications" data-open="publications">View publications</a>
+          <a class="btn" href="https://orcid.org/0000-0002-7578-3818" target="_blank" rel="noopener">ORCID profile</a>
+        </div>
+      </div>
+      <div class="photo" aria-hidden="false">
+        <img src="photo.jpg" alt="Portrait of Dr. Ciyamala Kushbu S" onerror="this.remove()">
+        <span aria-hidden="true">CK</span>
+      </div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="tools">
+    <h2>Explore</h2>
+    <div style="display:flex;gap:8px">
+      <button class="btn" id="expand">Open all sections</button>
+      <button class="btn" id="collapse">Close all sections</button>
+    </div>
+  </div>
+
+  <!-- PROFILE -->
+  <section class="acc open" id="profile">
+    <button class="acc-h" aria-expanded="true"><span class="t">Profile</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="acc-p"><div class="acc-in"><div class="acc-body">
+      <p class="lead">Dr. Ciyamala Kushbu S is an Associate Professor in the Department of Information Science and Engineering (ISE) at CMR Institute of Technology (CMRIT), Bangalore.</p>
+      <p>Before this role she taught for 2 years as an Assistant Professor in the ISE department at CMRIT and for 6.5 years as an Assistant Professor in the Department of ECE at RMK College of Engineering and Technology, Tamil Nadu. She also has 7 years of research experience at Anna University, Tamil Nadu.</p>
+      <p>Her contributions include more than 14 journal and conference papers, participation in more than 15 FDPs and workshops, and the book <em>Advanced Computer Architecture</em> published by Sahara Publications. Three of her papers are indexed in the Web of Science.</p>
+      <p>She is a university rank holder in both her B.E and M.E degrees and was school topper in the 10th and 12th grades. One of her articles won the best paper award at MIT, Chennai, and she was among the top 10 candidates for a project selected by ICTACT.</p>
+      <dl class="kv" style="margin-top:14px">
+        <dt>Department</dt><dd>Information Science and Engineering</dd>
+        <dt>Institution</dt><dd>CMR Institute of Technology, Bangalore</dd>
+        <dt>Research interests</dt><dd>Image processing, deep learning, machine learning</dd>
+        <dt>ORCID iD</dt><dd><a href="https://orcid.org/0000-0002-7578-3818" target="_blank" rel="noopener">0000-0002-7578-3818</a></dd>
+      </dl>
+    </div></div></div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="acc" id="publications">
+    <button class="acc-h" aria-expanded="false"><span class="t">Publications</span><span class="meta" id="pubMeta"></span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="acc-p"><div class="acc-in"><div class="acc-body">
+
+      <section class="acc sub">
+        <button class="acc-h" aria-expanded="false"><span class="t">Journal and conference papers</span><span class="meta" id="paperMeta"></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-p"><div class="acc-in"><div class="acc-body">
+          <div class="filters" role="group" aria-label="Filter publications">
+            <button class="fbtn" data-f="all" aria-pressed="true">All</button>
+            <button class="fbtn" data-f="Journal" aria-pressed="false">Journals</button>
+            <button class="fbtn" data-f="Conference" aria-pressed="false">Conferences</button>
+            <button class="fbtn" data-f="SCOPUS" aria-pressed="false">Scopus</button>
+            <button class="fbtn" data-f="SCIE" aria-pressed="false">SCIE</button>
+            <input class="search" id="pubSearch" type="search" placeholder="Search by title, author or year" aria-label="Search publications">
+          </div>
+          <p class="count" id="pubCount" aria-live="polite"></p>
+          <div id="pubList"></div>
+        </div></div></div>
+      </section>
+
+      <section class="acc sub">
+        <button class="acc-h" aria-expanded="false"><span class="t">Books and lab manuals</span><span class="meta" id="bookMeta"></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-p"><div class="acc-in"><div class="acc-body"><ol class="clean" id="books"></ol></div></div></div>
+      </section>
+
+      <section class="acc sub">
+        <button class="acc-h" aria-expanded="false"><span class="t">Patents published</span><span class="meta" id="patMeta"></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-p"><div class="acc-in"><div class="acc-body"><ol class="clean" id="patents"></ol></div></div></div>
+      </section>
+
+    </div></div></div>
+  </section>
+
+  <!-- TEACHING -->
+  <section class="acc" id="teaching">
+    <button class="acc-h" aria-expanded="false"><span class="t">Teaching and course materials</span><span class="meta" id="courseMeta"></span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="acc-p"><div class="acc-in"><div class="acc-body">
+      <div id="courses"></div>
+      <section class="acc sub">
+        <button class="acc-h" aria-expanded="false"><span class="t">Subjects handled</span><span class="meta" id="subjMeta"></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-p"><div class="acc-in"><div class="acc-body"><div class="chips" id="subjects"></div></div></div></div>
+      </section>
+      <section class="acc sub">
+        <button class="acc-h" aria-expanded="false"><span class="t">Areas of interest</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-p"><div class="acc-in"><div class="acc-body"><div class="chips"><span class="chip">Image processing</span><span class="chip">Deep learning</span><span class="chip">Machine learning</span></div></div></div></div>
+      </section>
+    </div></div></div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="acc" id="achievements">
+    <button class="acc-h" aria-expanded="false"><span class="t">Achievements and certification</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="acc-p"><div class="acc-in"><div class="acc-body" id="achv"></div></div></div>
+  </section>
+
+  <!-- SERVICE -->
+  <section class="acc" id="service">
+    <button class="acc-h" aria-expanded="false"><span class="t">Roles and service</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="acc-p"><div class="acc-in"><div class="acc-body" id="svc"></div></div></div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="acc" id="skills">
+    <button class="acc-h" aria-expanded="false"><span class="t">Software skills and memberships</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="acc-p"><div class="acc-in"><div class="acc-body">
+      <p><strong>Languages</strong></p>
+      <div class="chips"><span class="chip">C</span><span class="chip">C++</span><span class="chip">Python</span><span class="chip">Verilog HDL</span><span class="chip">SQL</span></div>
+      <p style="margin-top:16px"><strong>Tools</strong></p>
+      <div class="chips"><span class="chip">MATLAB</span><span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">Packet Tracer</span><span class="chip">PSPICE</span><span class="chip">NS2</span><span class="chip">ISE Design Suite 14.2</span><span class="chip">Power BI</span></div>
+      <p style="margin-top:16px"><strong>Professional body memberships</strong></p>
+      <div class="chips"><span class="chip">ISTE</span><span class="chip">IFERP</span><span class="chip">IAENG</span></div>
+    </div></div></div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="acc" id="events">
+    <button class="acc-h" aria-expanded="false"><span class="t">Events attended</span><span class="meta" id="evMeta"></span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="acc-p"><div class="acc-in"><div class="acc-body">
+      <p>Faculty development programs, workshops, webinars and training attended.</p>
+      <ol class="clean" id="evList"></ol>
+      <button class="btn more" id="evMore" aria-expanded="false"></button>
+    </div></div></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="acc" id="contact">
+    <button class="acc-h" aria-expanded="false"><span class="t">Contact</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="acc-p"><div class="acc-in"><div class="acc-body">
+      <dl class="kv">
+        <dt>Official email</dt><dd><a href="mailto:ciyamala.s@cmrit.ac.in">ciyamala.s@cmrit.ac.in</a></dd>
+        <dt>Personal email</dt><dd><a href="mailto:ciyamala91@gmail.com">ciyamala91@gmail.com</a></dd>
+        <dt>Address</dt><dd>Department of Information Science and Engineering, CMR Institute of Technology, Bangalore</dd>
+        <dt>ORCID</dt><dd><a href="https://orcid.org/0000-0002-7578-3818" target="_blank" rel="noopener">orcid.org/0000-0002-7578-3818</a></dd>
+      </dl>
+    </div></div></div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">Dr. Ciyamala Kushbu S, Associate Professor, Department of Information Science and Engineering, CMR Institute of Technology, Bangalore.</div>
+</footer>
+
+<script>
+/* ============ DATA ============ */
+const PUBS = [
+ {y:2025,t:'Conference',tags:['SCOPUS'],doi:'10.1109/ICANCS65819.2025.11377272',x:'Ciyamala Kushbu S, Deepa H, Y. Krishnaveni, B. Prasad, A. Bhasha and A. D. P, "Hybrid Architecture for Video-Based Real-Time Posture Correction Using Mediapipe and CNN1D," 2025 International Conference on Advances in Next-Gen Computer Science (ICANCS), Bangalore, India, 2025, pp. 1-6.'},
+ {y:2025,t:'Conference',tags:[],doi:'10.1109/ICANCS65819.2025.11377327',x:'Ciyamala Kushbu S, A. D. P, M. K, B. Prasad, R. A. Prathap and Y. K, "Enhanced Accident Severity Prediction Using LightGBM-CNN Fusion Framework," 2025 International Conference on Advances in Next-Gen Computer Science (ICANCS), Bangalore, India, 2025, pp. 1-6.'},
+ {y:2025,t:'Conference',tags:['SCOPUS'],doi:'10.1109/ICANCS65819.2025.11377236',x:'Ciyamala Kushbu, Varsha Jituri, C. S. Kumar, B. Prasad, R. T. V and S. N. G., "Smart and Advanced IoT-Based Forest Monitoring and Wildlife Detection System," 2025 International Conference on Advances in Next-Gen Computer Science (ICANCS), Bangalore, India, 2025, pp. 1-6.'},
+ {y:2025,t:'Conference',tags:['SCOPUS'],doi:'10.1109/ICISC65841.2025.11188175',x:'Vivekanand, C.V., Kalaivani, Ciyamala Kushbu S, Inbamalar, T.M. and Devi, A., "Intelligent Cooperative Spectrum Sensing with Energy Harvesting in Cognitive Radio Networks Using Optimized Subspace Search Algorithms," 2025 9th International Conference on Inventive Systems and Control (ICISC), IEEE, pp. 1459-1463, August 2025.'},
+ {y:2025,t:'Journal',tags:['SCOPUS','Q2'],doi:'10.1080/13682199.2025.2524989',x:'Ciyamala Kushbu S, T M, I., Lakshmi R, S., & Vivekanand, C. V., "Optimal feature extraction for the classification of Cardiac Magnetic Resonance Images," The Imaging Science Journal, 1-16, 2025.'},
+ {y:2025,t:'Conference',tags:['SCOPUS'],doi:'10.1109/APSIT63993.2025.11086224',x:'Ciyamala Kushbu S, C. Manasa, M. A. Reddy, P. Kumar, K. Manne and M. B. Prakash, "Symply - Medicine Recommendation System using Machine Learning," 2025 International Conference in Advances in Power, Signal, and Information Technology (APSIT), Bhubaneswar, India, 2025, pp. 1-5.'},
+ {y:2025,t:'Conference',tags:['SCOPUS'],doi:'10.1109/APSIT63993.2025.11086316',x:'Ciyamala Kushbu S, C. Manasa, M. Sruthi, T. Radhika, V. Chandraprakash and V. Rajeshwari, "Real-Time Bidirectional Visitor Counter with Wireless Smart Power System," 2025 International Conference in Advances in Power, Signal, and Information Technology (APSIT), Bhubaneswar, India, 2025, pp. 1-6.'},
+ {y:2025,t:'Conference',tags:['SCOPUS'],doi:'10.1109/APSIT63993.2025.11086264',x:'Ciyamala Kushbu S, Deepa H, S. L. R, S. Gaurav, S. Sen and V. Dash, "Gesture Art Board: Advancing Digital Expression Through Hand Gesture Recognition Technology," 2025 International Conference in Advances in Power, Signal, and Information Technology (APSIT), Bhubaneswar, India, 2025, pp. 1-6.'},
+ {y:2024,t:'Conference',tags:['SCOPUS'],url:'https://ieeexplore.ieee.org/document/10828932/',x:'S. Ciyamala Kushbu, Chettiyar Vani Vivekanand, R Purushothaman, Inbamalar T M, M Amala Justus Selvam, "Tiny ML-based Non-Invasive Approach of Cardiac Monitoring," 2024 7th International Conference on Contemporary Computing and Informatics (IC3I), 18-19 September 2024, Amity University Greater Noida Campus.'},
+ {y:2024,t:'Conference',tags:['SCOPUS'],x:'S. Ciyamala Kushbu, "Crypto Currency Price Prediction using LSTM2A-200 Analysis for Strategic Investment Moves," International Conference on Data Science & Exploration in Artificial Intelligence, 3-4 July 2024, MIT, Bangalore.'},
+ {y:2024,t:'Conference',tags:['SCOPUS'],x:'S. Ciyamala Kushbu, "Crowd Analysis using DeepSORT," International Conference on Data Science & Exploration in Artificial Intelligence, 3-4 July 2024, MIT, Bengaluru.'},
+ {y:2024,t:'Conference',tags:['SCOPUS'],x:'S. Ciyamala Kushbu, Manasa Ch, Deepa H, "Exploring Strategies for Identifying and Resolving Challenges in Deep Learning-Based Biventricular Segmentation," IEEE International Conference for Women in Innovation, Technology & Entrepreneurship (ICWITE 2024), 16-17 February 2024, Vemana Institute of Technology, Bengaluru.'},
+ {y:2023,t:'Journal',tags:['SCOPUS','SCIE','Q2'],x:'S. Ciyamala Kushbu, T. M. Inbamalar, and S. Sudha, "An efficient deep learning algorithm for the segmentation of cardiac ventricles," International Journal of Imaging Systems and Technology, Wiley, July 2023.'},
+ {y:2022,t:'Journal',tags:['SCIE'],x:'S. Ciyamala Kushbu, T. M. Inbamalar, "Making Semi-Automatic Segmentation Method to be Automatic Using Deep Learning for Biventricular Segmentation," Journal of Medical Imaging and Health Informatics, American Scientific Publishers, 12(2), 112-122, February 2022.'},
+ {y:2021,t:'Journal',tags:['SCIE'],url:'https://www.ingentaconnect.com/contentone/asp/jmihi/2021/00000011/00000004/art00001',x:'S. Ciyamala Kushbu, T. M. Inbamalar, "Interactive one way contour initialization for cardiac left ventricle and right ventricle segmentation using hybrid method," Journal of Medical Imaging and Health Informatics, American Scientific Publishers, 11(4), 1037-1054, April 2021.'},
+ {y:2019,t:'Conference',tags:[],x:'S. Ciyamala Kushbu, Catherine Rathi Devapriya, Dhanya, "Left Ventricular Hypertrophy and Dilated Cardiomyopathy prognosis using Neural Networks," Proceedings of 5th National Conference on Information and Communication Technologies, SSN, 55-59, April 2019.'},
+ {y:2019,t:'Journal',tags:[],x:'Sreeja, G. B., Inbamalar, T. M., Ciyamala Kushbu S, "Detection of Signature Based Forgeries Using Artificial Neural Network," Blue Eyes Intelligence Engineering & Sciences Publication, 9(1), 400-403, 2019.'},
+ {y:2018,t:'Journal',tags:[],x:'Ciyamala Kushbu S, Balaji V, Ajith Kumar P, Kiren Aananth A, Gunasekar N, "Forgery Detection in Documents," SSRG International Journal of Electronics and Communication Engineering, Seventh Sense Research Group, 5(5), 15-20, 2018.'},
+ {y:2018,t:'Conference',tags:[],x:'Ciyamala Kushbu S, Balaji V, Ajith Kumar P, "Forgery Detection in Documents," 2nd International Conference on Recent Trends in Engineering, Computers, Information Technology and Applications, PSNA College of Engineering and Technology, 23 March 2018.'},
+ {y:2018,t:'Journal',tags:[],x:'S. Ciyamala Kushbu, A. T. Rishikesh, P. Vignesh, P. Vignesh, "Automatic Energy Meter Monitoring System Using IOT," International Journal of Advance Research in Science and Engineering, 472-477, 2018.'},
+ {y:2018,t:'Conference',tags:[],x:'S. Ciyamala Kushbu, A. T. Rishikesh, P. Vignesh, "Automatic Energy Meter Monitoring System," International Conference on Advancements in Engineering, Technology and Sciences, Dhaanish Ahmed College of Engineering, 16-17 March 2018.'},
+ {y:2017,t:'Journal',tags:[],x:'S. Ciyamala Kushbu, C. Kavitha, U. Pradheeba, "Segmentation of Leukocytes Diagnosis of Disease," International Journal for Modern Trends in Science and Technology, 3(5), 84-87, 2017.'},
+ {y:2017,t:'Conference',tags:[],x:'Ciyamala Kushbu S, Hari Govind V., Adarssh Mahesh, Nagendra Babu M., "Detection of Moving Objects," Second National Conference on Recent Innovations in Electronics and Computing Technologies (NCRIECT-17), Annai Veilankanni\'s College of Engineering, 512-514, March 2017.'},
+ {y:2017,t:'Conference',tags:[],x:'Ciyamala Kushbu S and Madhan Kumar K, "Docker based IRIS recognition using intelligent model," National Conference on Data Science and Intelligent Information Technology (NCDSIIT\'17), Rajalakshmi Institute of Technology, 125-128, March 2017.'},
+ {y:2017,t:'Conference',tags:[],x:'Ciyamala Kushbu S and Arthi Devarani P, "Reverse process of Image and Data steganography using adaptive pixel pair matching algorithm and DWT," National Conference on Nascent Technologies in Biomedical, Electrical, Electronics and Communication, Vel Tech Multitech Engineering College, 615-618, February 2017.'},
+ {y:2016,t:'Conference',tags:[],x:'Ciyamala Kushbu S, Bandala Raja Sekhar, Alahari Saimouli, "Green Radio Approach Towards Energy Efficient Radio Access Networks for Mobile Communication," National Conference on Emerging Trends in Information Science and Technology, RVSPCET, 125-127, March 2016.'},
+ {y:2015,t:'Journal',tags:['SCOPUS'],x:'Ciyamala Kushbu S, S. Shaik Majeeth, "Segmentation of Immune Cells Based On Toggle Operator And Counting," International Journal of Applied Engineering Research (IJAER), 10(55), 2487-2491, 2015.'},
+ {y:2015,t:'Conference',tags:[],x:'Ciyamala Kushbu S, S. Shaik Majeeth, "Segmentation of Immune Cells Based On Toggle Operator And Counting," International Conference ICCAET\'15, Syed Ammal Engineering College, Ramanathapuram, May 2015.'},
+ {y:2012,t:'Conference',tags:[],x:'Ciyamala Kushbu S and S. Ethiraj, "ROF Technologies and Integration Architectures for In-Building Optical-Wireless Access Networks," Instrumentation Engineers Association Conference, MIT, pp. 9-10, 2012.'}
+];
+
+const BOOKS = [
+ 'Authored the book <em>"Advanced Computer Architecture"</em>, Sahara Publications, 2017. ISBN: 978-93-86636-16-4.',
+ 'Published a lab manual on "Digital Design and Computer Organization", 2023.',
+ 'Published a lab manual on "UI/UX", 2025.',
+ 'Published a lab manual on "LaTeX", 2025.',
+ 'Published a lab manual on "DBMS", 2025.'
+];
+
+const PATENTS = [
+ 'Eco-friendly Innovation in Milk Packaging for Extended Shelf Life. Patent IN202441049905 A',
+ 'Adaptive VR Platform for Personalized Stress Relief and Meditation Based on Real-Time Biometric Feed. Patent IN202441050055 A',
+ 'An AI-Driven Application for Comprehensive Career Guidance and Personalized Recommendations for Students. Patent IN202441050060 A'
+];
+
+const S = 'https://www.slideshare.net/slideshow/';
+const SC = 'https://www.scribd.com/document/';
+const COURSES = [
+ {t:'Digital Design and Computer Organization (theory)', n:'2023-24 and 2024-25, odd semester', note:'Notes for the 2022 scheme.', links:[
+   ['Course notes folder','https://drive.google.com/drive/folders/1O4kfiwEdedJEFRglIONmNpClujhBdeJp?usp=drive_link'],
+   ['Expectation setting PPT',S+'bcs302-digital-design-and-computer-organization-vty2022-schemeexpectation-setting-ppt/262456420'],
+   ['Module 3: Computer structure',S+'bcs302module-3-ddcocomputer-structurevtu-2022-schemebcs302pdf/266248822'],
+   ['Module 4: Input/output organization',S+'bcs302-module-4-input-output-organizationfull-doc01pdf/266233700'],
+   ['Module 5: Basic processing unit',S+'bcs302ddcobasic-processing-unit-vtu-2022-schemeddcopdf/266190393']]},
+ {t:'Digital Design and Computer Organization lab', n:'2023-24 and 2024-25', links:[
+   ['Lab manual (Everand)','https://www.everand.com/book/687443881/BCS302-Digital-Design-and-Computer-Organization-Lab-Manual-VTU'],
+   ['Lab manual (SlideShare)',S+'digital-design-and-computer-organization-lab-manual-vtu-2022-schemepdf/265099980'],
+   ['Lab manual (Scribd)',SC+'678373015/BCS302-Digital-Design-And-Computer-Organization-Lab-manual-Visvesvaraya-Technological-University-VTU-2022-scheme-academic-year-2023-24']]},
+ {t:'Database Management System', n:'2023-24 and 2024-25, even semester', links:[
+   ['DBMS Module 1 notes',SC+'760313824/BCS403-Database-Management-System-DBMS-Module-1'],
+   ['DBMS lab manual',SC+'678373015/BCS302-Digital-Design-And-Computer-Organization-Lab-manual-Visvesvaraya-Technological-University-VTU-2022-scheme-academic-year-2023-24']]},
+ {t:'UI/UX lab', links:[['UI/UX lab manual (BCS456C)',SC+'840089197/BCS456C-UIUX-Lab-Manual']]},
+ {t:'Parallel Computing', n:'2025-26 odd and 2026-27 odd', links:[
+   ['Theory materials (Drive)','https://drive.google.com/drive/folders/1EnhY4Q3iVANMUG4bcUhAx3-zFaqKmuc7?usp=drive_link'],
+   ['Lab, 2025-26 odd (Drive)','https://drive.google.com/drive/folders/1KA4JbEvahBIpgCtX88_0uG5Jc6SEo-0b?usp=drive_link'],
+   ['Lab, 2026-27 odd (Drive)','https://drive.google.com/drive/folders/17sXpvdZn7e5OyuB1VBUIRforfya4vH0d']]},
+ {t:'Python programming (theory and lab)', n:'2025-26 even semester', links:[
+   ['Module notes (1BPLC105B/205B)',SC+'1054966515/Python-Programming-1BPLC105B-205B-Module-Notes-VTU'],
+   ['Question bank with solutions',SC+'1054956186/Python-Programming-1BPLC105B-205B-Question-Bank-with-Solutions']]}
+];
+
+const SUBJECTS = ['Database Management System','Computer Architecture','Computer Organization','Advanced Computer Architecture','Computer Networks','Digital Design and Computer Organization','Digital Electronics','Signals and Systems','Environmental Studies','Electronic Circuits','Circuit Analysis'];
+
+const ACHV = [
+ {t:'Academic excellence', items:['University Rank 1 in PG course with 9.2 CGPA.','University Rank 34 in UG course with 8.8 CGPA.','School topper in 12th grade with 95%.','School topper in 10th grade with 95%.','Consistently achieved over 95% success in all subjects supervised.']},
+ {t:'Project accomplishments', items:['Developed and implemented an approved Mega Application Project, Eduquant: Student Transformation Record for easy mentoring (ongoing, 2023 to date).']},
+ {t:'Professional development', items:['Completed NPTEL courses with Elite credit in "Joy of Computing using Python", "Computer Architecture and Organization" and "Practical Machine Learning using TensorFlow".','Engaged in over 15 Faculty Development Programs (FDPs) and 5 workshops.']},
+ {t:'Leadership and recognition', items:['Mentored a team that won second prize in the Smart India Hackathon, 2018.','Delivered a guest lecture on "Ethernet applications" at RMK Engineering College, 2015.','Top finalist in the ICTACT Student Innovator Awards, 2015.','Won the best article award for a paper at Madras Institute of Technology (MIT), 2012.']},
+ {t:'Additional achievements', items:['Completed an online MATLAB course with a 100% score, 2015.','Appointed as a one-day Government employee by the District Collector during election duty, 2015.','Received appreciation certificates for 100% attendance in both B.E and M.E courses.','Qualified for the final round of the Mega Science Extravaganza for Chandrayaan-1, 2008.']},
+ {t:'Certification', items:['Certified Instructor of Cisco Certified Network Associate (CCNA).']}
+];
+
+const SVC = [
+ {t:'Current support roles', items:['Department Research Coordinator','Faculty Placement Coordinator','Student Club Activities Coordinator','EMS Coordinator','Project Guide','Conference Organizing Committee member','Mentor','Class Teacher','Robotics and Drones Center of Excellence member','Project Coordinator','Pedagogy Evaluator']},
+ {t:'Previously served as', items:['Co-Coordinator for NBA assessments for Level 3 and Level 5 programs','ISO files: Slow Learners, Evening Coaching, Result Analysis Coordinator','Department AICTE Co-Coordinator','Compere','Subject Lesson Plan Coordinator','Class Advisor','Internal Assessment Coordinator','Lab Coordinator','Attendance Coordinator','Break Timetable Coordinator','Counsellor']},
+ {t:'Event coordinator', items:['Coordinator for the LTTP on "Generative and Agentic AI", 23 to 28 March 2026 (6 days), CMR Institute of Technology, Bengaluru.']},
+ {t:'Resource person', items:['One-day workshop on "Ethernet" at RMK Engineering College, 2015.','Two-day workshop on "UI/UX" at Atria Institute of Technology, 6 and 7 March 2025.','Two days in the LTTP on "Generative and Agentic AI", CMR Institute of Technology, 27 and 28 March 2026.']},
+ {t:'Reviewer', items:['Second IEEE International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE\'24), School of Computer Science Engineering and Information Systems (SCORE), in collaboration with IEEE and ACM, Vellore Institute of Technology, 2024.','Biomedical Signal Processing & Control (Q2 journal), 2024.','4th International Conference on Communication, Computing and Industry 6.0 (C2I6-2023), CMR Institute of Technology.','3rd International Conference on Data Science and Information System (ICDSIS-2025), Malnad College of Engineering, Hassan, 2025.']}
+];
+
+const EVENTS = [
+ 'Organizing member of the IEEE conference conducted in the ISE department of CMRIT.',
+ 'Attended 5-day online FDP on "Inculcating Universal Human Values in Technical Education", organized by AICTE, 25.09.2023 to 29.09.2023.',
+ 'Attended 5-day online FDP on "Applications of Image Processing", organized by St. Joseph\'s College of Engineering, 14.07.2020 to 18.07.2020.',
+ 'Participated in 5-day FDP on "Embracing the creative side of Teaching and learning methods", organized by RMK College of Engineering and Technology, 29.06.2020 to 03.07.2020.',
+ 'Attended 5-day webinar series on Image Processing, organized by Sri Manakula Vinayagar Engineering College, 25.05.2020 to 29.05.2020.',
+ 'Attended 1-day webinar on Deep Learning for Natural Language Processing, organized by RMKCET, 12.05.2020.',
+ 'Attended 1-day webinar on IoT architecture and real-time industrial use cases at RMKCET, 21.05.2020.',
+ 'Attended 5-day webinar on "Leading in a VUCA world", organized by ICTACT, 20.04.2020 to 25.04.2020.',
+ 'Participated in 6-day national level STTP on Applied Mathematics and Scientific Computation for Engineering Research at S.A. Engineering College, 04.11.2019 to 09.11.2019.',
+ 'Attended 2-day workshop on Networking at SANSBOUND, The Networking School, 22.10.2019 to 23.10.2019.',
+ 'Participated in 1-day national workshop on Intellectual Property Rights (IPR), organized by the Institution\'s Innovation Council and the Department of Mechanical Engineering at RMCET, 04.10.2019.',
+ 'Participated in the training programme on Student Psychology conducted by NITTTR at RMKCET, 17.06.2019 to 19.06.2019.',
+ 'Attended 5-day national level workshop on Machine Learning Approaches on Medical Imaging for Clinical Psychology and Health Care applications, organized by SCOPE at Vellore Institute of Technology, 06.05.2019 to 10.05.2019.',
+ 'Completed 1-day FDP on Recent Trends in 5G Technologies, conducted by the Director R&D, Samsung, at RMK Engineering College, 02.11.2018.',
+ 'Participated in 1-day FDP on College Companion, organized by ISTE Staff Chapter, 14.07.2018.',
+ 'Attended 7-day FDTP on Signals and Systems at MIT, Anna University, 28.05.2018 to 03.06.2018.',
+ 'Participated in 7-day FDTP on Artificial Intelligence, Anna University, 05.12.2017 to 12.12.2017.',
+ 'Attended 1-day workshop on Intellectual Property Rights Procedures at RMKCET, 17.06.2017.',
+ 'Undergone 1-day industrial visit on Telecommunication at BSNL, Rajiv Gandhi Memorial Telecom Training Centre, 13.07.2017.',
+ 'Attended 5-day FDP on Python Programming at RMD Engineering College, 20.06.2017 to 24.06.2017.',
+ 'Attended 1-day FDP on Social, Mobile, Analytics and Cloud (SMAC) at RMK Engineering College, 08.06.2017.',
+ 'Attended 7-day FDP on Transmission Lines and Waveguides at RMKCET, 29.05.2017 to 04.06.2017.',
+ 'Participated in 2-day workshop on Advanced FPGA Design at Saveetha Engineering College, 17.02.2017 to 18.02.2017.',
+ 'Attended 7-day FDP on EC6503 Transmission Lines and Waveguides, Anna University, 13.06.2016 to 19.06.2016.',
+ 'Attended 1-day FDP on Leadership Skills, conducted by Infosys Ltd at RMK Engineering College, 31.05.2016.',
+ 'Completed 1-day FDP on Internet of Things at RMK Engineering College, 05.05.2016.',
+ 'Participated in 1-day national seminar on Cloud Computing and Security Issues at RMKCET, 07.03.2016.',
+ 'Attended 1-day national workshop "Pioneer to Discover with Internet of Things" at RMKCET, 07.03.2016.',
+ 'Attended 1-day refresher course on Academic Excellence at RMCET, 25.01.2016.',
+ 'Participated in 2-day workshop on Advancements in Biomedical Signal and Image Processing, sponsored by UGC-DRS-II (SAP II), at Madras Institute of Technology, 29.10.2015 to 30.10.2015.',
+ 'Participated in 1-day workshop on Awareness of Tera Hertz Technology, sponsored by IET, at RMCET, 19.09.2015.',
+ 'Participated in 1-day national level workshop on Brain Computer Interface Development and Simulation, sponsored by IET, at RMCET, 19.09.2015.',
+ 'Undergone 1-day industrial visit on Telecommunication at BSNL, Rajiv Gandhi Memorial Telecom Training Centre, 06.07.2015.',
+ 'Attended 2-day refresher course on Academic Excellence at RMK College of Engineering and Technology, 15.06.2015 to 16.06.2015.',
+ 'Attended the Anna University approved 7-day FDTP on Electronic Circuits 1 at RMKCET, 30.05.2015 to 06.06.2015.',
+ 'Attended 2-day ISTE e-seminar on "Steps 2 Research", organized by ISTE Kerala Section and CSI Cochin Chapter, 19.09.2014 to 20.09.2014.',
+ 'Attended 2-day national level workshop on Advances in Image Processing using MATLAB at Kongu Engineering College, 27.08.2014 to 28.08.2014.',
+ 'Participated in 2-day national workshop on Recent Trends and Research Issues in NS-2 at Saveetha Engineering College, 31.01.2014 to 01.02.2014.',
+ 'Participated in 2-day national workshop on Recent Trends and Research Issues in CADENCE at Saveetha Engineering College, 29.01.2014 to 30.01.2014.',
+ 'Participated in 2-day national workshop on Recent Trends and Research Issues in Image Processing at Saveetha Engineering College, 27.01.2014 to 28.01.2014.',
+ 'Attended 2-day workshop on Applications of Signal and Image Processing, organized by the Research Cell, Sri Venkateshwara College of Engineering, 11.12.2013 to 12.12.2013.',
+ 'Attended 2-day workshop on "NS3: A Research Perspective" at Velammal Engineering College, 07.11.2013 to 08.11.2013.',
+ 'Participated in 3-day Android App Development workshop conducted as part of aBaCUS\'12, 27.01.2012 to 29.01.2012.',
+ 'Participated in ORBITCE, a national-level symposium at SSN Engineering College, 26.08.2011.',
+ 'Completed 5-day in-plant training on Transmission Lines at Doordarshan Kendra, 13.06.2011 to 17.06.2011.',
+ 'Participated and topped in Velammal\'s 5th State level Science Talent Search Exam, 22.11.2008.'
+];
+
+/* ============ RENDER ============ */
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const CHEV = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+const sub = (title, meta, bodyHtml) =>
+  `<section class="acc sub"><button class="acc-h" aria-expanded="false"><span class="t">${title}</span>${meta?`<span class="meta">${meta}</span>`:''}${CHEV}</button><div class="acc-p"><div class="acc-in"><div class="acc-body">${bodyHtml}</div></div></div></section>`;
+
+// stats + counts
+$('#stats').innerHTML = [
+  ['Associate Professor','ISE, CMR Institute of Technology'],
+  [PUBS.length,'journal and conference papers listed'],
+  [PATENTS.length,'patents published'],
+  [EVENTS.length,'FDPs, workshops and events attended']
+].map(([b,s]) => `<div class="stat"><b>${b}</b><small>${s}</small></div>`).join('');
+$('#pubMeta').textContent = (PUBS.length + BOOKS.length + PATENTS.length) + ' items';
+$('#bookMeta').textContent = BOOKS.length;
+$('#patMeta').textContent = PATENTS.length;
+$('#books').innerHTML = BOOKS.map(b => `<li>${b}</li>`).join('');
+$('#patents').innerHTML = PATENTS.map(p => `<li>${esc(p)}</li>`).join('');
+
+// publications with filter + search
+let filter = 'all', query = '';
+function renderPubs(){
+  const q = query.trim().toLowerCase();
+  const rows = PUBS.filter(p =>
+    (filter==='all' || p.t===filter || p.tags.includes(filter)) &&
+    (!q || (p.x+' '+p.y).toLowerCase().includes(q)));
+  $('#pubCount').textContent = `Showing ${rows.length} of ${PUBS.length}`;
+  $('#paperMeta').textContent = PUBS.length;
+  $('#pubList').innerHTML = rows.length ? rows.map(p => {
+    const href = p.doi ? 'https://doi.org/'+p.doi : p.url;
+    const tags = p.tags.map(t=>`<span class="tag">${t}</span>`).join('');
+    return `<div class="pub"><div class="y">${p.y}</div><div>${esc(p.x)}${tags}<div class="ty">${p.t}${href?` &middot; <a href="${href}" target="_blank" rel="noopener">View paper</a>`:''}</div></div></div>`;
+  }).join('') : '<div class="empty">No papers match. Clear the search or choose All.</div>';
+}
+$$('.fbtn').forEach(b => b.addEventListener('click', () => {
+  filter = b.dataset.f;
+  $$('.fbtn').forEach(x => x.setAttribute('aria-pressed', x===b));
+  renderPubs();
+}));
+$('#pubSearch').addEventListener('input', e => { query = e.target.value; renderPubs(); });
+renderPubs();
+
+// courses
+$('#courseMeta').textContent = COURSES.length + ' courses';
+$('#courses').innerHTML = COURSES.map(c =>
+  sub(esc(c.t), c.n ? '' : '', `${c.n?`<p><strong>Handled:</strong> ${esc(c.n)}</p>`:''}${c.note?`<p>${esc(c.note)}</p>`:''}<ul class="links">${c.links.map(([l,u])=>`<li><a href="${u}" target="_blank" rel="noopener">${esc(l)}</a></li>`).join('')}</ul>`)
+).join('');
+$('#subjMeta').textContent = SUBJECTS.length;
+$('#subjects').innerHTML = SUBJECTS.map(s=>`<span class="chip">${esc(s)}</span>`).join('');
+
+// achievements / service
+const group = g => sub(esc(g.t), g.items.length>1?g.items.length:'', `<ul class="clean">${g.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul>`);
+$('#achv').innerHTML = ACHV.map(group).join('');
+$('#svc').innerHTML = SVC.map(group).join('');
+
+// events
+const SHOW = 8;
+$('#evMeta').textContent = EVENTS.length;
+const evList = $('#evList'), evMore = $('#evMore');
+let evAll = false;
+function renderEvents(){
+  evList.innerHTML = (evAll ? EVENTS : EVENTS.slice(0,SHOW)).map(e=>`<li>${esc(e)}</li>`).join('');
+  evMore.textContent = evAll ? 'Show fewer events' : `Show all ${EVENTS.length} events`;
+  evMore.setAttribute('aria-expanded', evAll);
+}
+evMore.addEventListener('click', () => { evAll = !evAll; renderEvents(); });
+renderEvents();
+
+/* ============ ACCORDION ============ */
+function setOpen(acc, open){
+  acc.classList.toggle('open', open);
+  const h = acc.querySelector(':scope > .acc-h');
+  if (h) h.setAttribute('aria-expanded', open);
+}
+document.addEventListener('click', e => {
+  const h = e.target.closest('.acc-h');
+  if (!h) return;
+  const acc = h.parentElement;
+  setOpen(acc, !acc.classList.contains('open'));
+});
+$('#expand').addEventListener('click', () => $$('.acc').forEach(a => setOpen(a, true)));
+$('#collapse').addEventListener('click', () => $$('.acc').forEach(a => setOpen(a, false)));
+
+// nav: open the target section, then scroll to it
+function goTo(id){
+  const el = document.getElementById(id);
+  if (!el) return;
+  setOpen(el, true);
+  setTimeout(() => el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'}), 60);
+}
+$$('.nav a, [data-open]').forEach(a => a.addEventListener('click', e => {
+  const id = (a.dataset.open || a.getAttribute('href').slice(1));
+  if (id && id !== 'top'){ e.preventDefault(); goTo(id); history.replaceState(null,'','#'+id); }
+}));
+if (location.hash && document.getElementById(location.hash.slice(1))) goTo(location.hash.slice(1));
+
+// scroll spy
+const links = $$('.nav a');
+const spy = new IntersectionObserver(es => {
+  es.forEach(en => { if (en.isIntersecting) links.forEach(l => l.classList.toggle('on', l.getAttribute('href') === '#'+en.target.id)); });
+}, {rootMargin:'-30% 0px -60% 0px'});
+$$('main > .wrap > .acc').forEach(s => spy.observe(s));
+
+/* ============ THEME ============ */
+const root = document.documentElement;
+let saved = null;
+try { saved = localStorage.getItem('theme'); } catch(e){}
+root.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+$('#theme').addEventListener('click', () => {
+  const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+  root.dataset.theme = next;
+  try { localStorage.setItem('theme', next); } catch(e){}
+});
+</script>
+</body>
+</html>
